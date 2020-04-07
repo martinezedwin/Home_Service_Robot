@@ -49,7 +49,7 @@ int main( int argc, char** argv )
     marker.color.b = 0.0f;
     marker.color.a = 1.0;
 
-    marker.lifetime = ros::Duration();
+    //marker.lifetime = ros::Duration();
 
     // Publish the marker
     while (marker_pub.getNumSubscribers() < 1)
@@ -61,14 +61,31 @@ int main( int argc, char** argv )
       ROS_WARN_ONCE("Please create a subscriber to the marker");
       sleep(1);
     }
+    ROS_WARN("Publishing Marker at pick up");
     marker_pub.publish(marker);
 
+    ROS_WARN("Wait 5 Seconds");
     ros::Duration(5.0).sleep();
-    marker.action = visualization_msgs::Marker::DELETEALL;
+    
+    ROS_WARN("Deleting");    
+    marker.action = visualization_msgs::Marker::DELETE;
+    marker_pub.publish(marker);
 
-    //marker.pose.position.x = 5;
-    //marker.pose.position.y = 4;
-    //marker.pose.position.z = 0;
+    ROS_WARN("Wait 5 Seconds");
+    ros::Duration(5.0).sleep();
+
+    marker.action = visualization_msgs::Marker::ADD;
+
+    marker.pose.position.x = 5;
+    marker.pose.position.y = 0;
+    marker.pose.position.z = 0;
+
+    ROS_WARN("Publishing Marker at drop off");
+    marker_pub.publish(marker); 
+
+    ROS_WARN("END");
+    ros::Duration(5.0).sleep();
+
     
     /*
     // Cycle between different shapes
@@ -89,6 +106,6 @@ int main( int argc, char** argv )
     }
     */
 
-    //r.sleep();
+    r.sleep();
   }
 }
