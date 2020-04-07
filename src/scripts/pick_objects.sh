@@ -14,5 +14,4 @@ sleep  10
 
 #pick_objects
 xterm  -e  " cd $(pwd)/../.. ; source devel/setup.bash ; rosrun pick_objects pick_objects "
-#xterm  -e  " cd $(pwd)/../.. ; source devel/setup.bash ; rosrun simple_navigation_goals simple_navigation_goals "
 sleep 5
