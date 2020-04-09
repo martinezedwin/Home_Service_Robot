@@ -12,11 +12,10 @@ sleep 5
 xterm  -e  " cd $(pwd)/../.. ; source devel/setup.bash ; rosrun rviz rviz -d $(pwd)/../RvizConfig/add_marker.rviz " &
 sleep  5
 
-#pick_objects
-xterm  -e  " cd $(pwd)/../.. ; source devel/setup.bash ; rosrun pick_objects pick_objects " &
-sleep 5
-
 #add markers
-xterm  -e  " cd $(pwd)/../.. ; source devel/setup.bash ; rosrun add_markers add_markers "
+xterm  -e  " cd $(pwd)/../.. ; source devel/setup.bash ; rosrun add_markers add_markers " &
 sleep 5
 
+#pick_objects
+xterm  -e  " cd $(pwd)/../.. ; source devel/setup.bash ; rosrun pick_objects pick_objects "
+sleep 5
