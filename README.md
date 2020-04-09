@@ -48,7 +48,6 @@ The goal of this project was to have a robot drive to a pick up location where a
 
 ### How to run it
  
-TO_DO:
 1. Clone this repo: `git clone https://github.com/martinezedwin/Home_Service_Robot.git`
 2. Clone and install the ROS repos outlined in the dependencies.
 3. `cd PATH_TO/Home_Service_Robot/` and then `catkin_make`.
