@@ -61,5 +61,5 @@ After moving for a bit, the robot quickly localizes:
 
 Note: How the arrows converged
 
-	
 
+[![Final result video](./src/images/video_cover.png)](https://www.youtube.com/watch?v=uEap501GVlM)
