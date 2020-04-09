@@ -30,36 +30,32 @@
 	4. `catkin_make`
 
 ### Overview
-TO_DO:
+
+![Project Overview](./src/images/Project_overview.png)
+
+The packages used in this project were:
+1. turtlebot_gazebo: Used to load the world the turtlebot gazebo world. Also used to localize using amcl after mapping an area.
+2. turtlebot_rviz_launchers: to load the rviz and it's configurations.
+3. turtlebot_teleop: to control the robot manually with keyboard keys. Useful for testing and mapping.
+4. gmapping: mapping the envioronment gazebo world.
+5. pick_objects: to control the robot to the pick up and drop off destinations.
+6. add_markers: to simulate the objects being picked up or dropped off.
+
 
 #### Goal
-TO_DO:
+The goal of this project was to have a robot drive to a pick up location where a package (green box) would be waiting to be picked up. The box would then disapear to simulate a pick up and then the robot would move to a predefined drop off location where the green box would re-apear.
 
 
 ### How to run it
  
 TO_DO:
-1. Clone this repo: `git clone https://github.com/martinezedwin/Go_Chase_It`
-2. Install ROS and Gazebo (from the project directory `chmod +x setup.sh && ./setup.sh`)
-3. Install ros-teleop (see commands under Dependencies)
-4. run the run_world_1.sh script: `chmod + x run_world_1.sh && ./run_world.sh`. 
-5. run the get ball script to have the robot look for and chase the ball: `chmod + x amcl_2.sh && ./amcl_2.sh`
-6. Control the bot: `chmod + x teleop_3.sh && ./teleop_3.sh`
+1. Clone this repo: `git clone https://github.com/martinezedwin/Home_Service_Robot.git`
+2. Clone and install the ROS repos outlined in the dependencies.
+3. `cd PATH_TO/Home_Service_Robot/` and then `catkin_make`.
+4. `cd PATH_TO/Home_Service_Robot/src/scripts`
+5. Run the home_service script: `./home_service.sh`
 
 
 ### Results
-TO_DO:
-Once the project is running you will see an unlocalized robot in Rviz:
-![Unlocalized](./src/images/Unlocalized.png)
-Note: The arrows are scattered
-
-After moving for a bit, the robot quickly localizes:
-
-|   Top View            |    Side View      |
-|---------------|----------|
-|![Top view](./src/images/Localization_1.png)| ![Side view](./src/images/Localization_2.png)|
-
-Note: How the arrows converged
-
 
 [![Final result video](./src/images/video_cover.png)](https://www.youtube.com/watch?v=uEap501GVlM)
